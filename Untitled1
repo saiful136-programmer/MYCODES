@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int arows , acollumns, brows, bcollumns;
+    int a[max][max];
+    int sum=0;
+    int result[][];
+    printf("enter the rows & collumns :");
+    scanf("%d%d", &arows, &acollumns);
+    printf("enter the a matrix");
+    for(i=0; i<arows; i++)
+    {
+        for(j=0;j<acollumns;j++)
+        {
+            scanf("%d", a[i][j]);
+        }
+    }
+    int b[max][max];
+    printf("enter the rows & collumns :");
+    scanf("%d%d", &brows, &bcollumns);
+    printf("enter the b matrix");
+    for(i=0; i<brows; i++)
+    {
+        for(j=0;j<bcollumns;j++)
+        {
+            scanf("%d", b[i][j]);
+        }
+    }
+    for(i=0;i<arows;i++)
+    {
+        for(j=0;j<bcollumns;j++)
+        {
+            for(k=0;k<brows;k++)
+            {
+                sum+=a[i][k]*b[k][j];
+            }
+            printf("result[i][j]");
+            sum=0;
+        }
+    }
+    return 0;
+}
